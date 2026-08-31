@@ -5,7 +5,7 @@ class Solution {
         int n=arr.length;
         ArrayList<Integer> ans=new ArrayList<>();
         for(int i=0;i<n;i++){
-           if(arr[i]<0) q.add(i);
+            if(arr[i]<0) q.add(i);
         }
         for(int i=0;i<n-k+1;i++){
             while(q.size()>0 && q.peek()<i){
@@ -13,11 +13,11 @@ class Solution {
             }
             if(q.size()>0 && q.peek()<=i+k-1){
                 ans.add(arr[q.peek()]);
+                
             }
             else{
                 ans.add(0);
             }
-            
         }
         return ans;
     }
